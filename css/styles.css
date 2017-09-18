@@ -1,0 +1,874 @@
+/*
+Theme Name: Terre Di San Vito
+Theme URI:
+Author: Dhananjaya Maha Malage
+Author URI: http://whenalive.com/
+Description: Wordpress Theme developed for Terre Di San Vito.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, brown, orange, tan, white, yellow, light, one-column, two-columns, right-sidebar, flexible-width, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, translation-ready
+Text Domain: terredisanvito
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Ovo');
+/*@import url('https://fonts.googleapis.com/css?family=Mrs+Sheppards');*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@font-face {
+    font-family: "Keyline";
+    src: url("../fonts/Keyline-Regular.otf");
+}
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* ******** reset css end ********* */
+
+
+/* *********** general css start *********** */
+
+body,
+html {
+    height: 100%;
+}
+html{
+    margin: 0;
+}
+
+body {
+    /*font: 15px "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+    text-rendering: optimizeLegibility;
+}
+
+code, kbd, tt, var {
+    font: 14px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+
+a:link, a:visited {
+    color: #3a8bbb;
+    text-decoration: none;
+}
+
+a:active {
+    outline: none;
+}
+
+.clear {clear: both;}
+
+.background-white {
+    background-color: #fff;
+}
+.background-black{
+    background-color: #000000;
+}
+.background-transparent{
+    background-color: transparent;
+}
+.full-height{height: 100%;}
+.no-padding-left{padding-left: 0;}
+.no-padding-right{padding-right: 0;}
+
+.main-divider hr{
+    border: none;
+    border-top: 1px dotted #f00;
+    color: #fff;
+    background-color: #fff;
+    height: 1px;
+    width: 100%;
+}
+
+/* ******************* general css ends *********** */
+
+/**
+ * Nav bar
+ */
+.navbar-right{
+    margin-top: 40px;
+}
+.navbar-default {
+    /*
+    background-color: #000000;
+    border-color: #000000;
+    */
+    background-color: transparent;
+    border-color: transparent;
+    height: 120px;
+}
+.navbar-default .navbar-brand {
+    color: #ffffff;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #ffffff;
+}
+.navbar-default .navbar-brand>img{
+    max-width: 100px;
+}
+.navbar-default .navbar-text {
+    color: #ffffff;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 17px;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #ffffff;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu {
+    background-color: #000000;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a {
+    color: #ffffff;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a:hover,
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a:focus {
+    color: #ffffff;
+    background-color: #000000;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li.divider {
+    /*
+    background-color: #000000;
+    */
+    background-color: transparent;
+}
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #ffffff;
+    /*
+    background-color: #000000;
+    */
+    background-color: transparent;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #ffffff;
+    /*
+    background-color: #000000;
+    */
+    background-color: transparent;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+    color: #ffffff;
+    /*
+    background-color: #000000;
+    */
+    background-color: transparent;
+}
+.navbar-default .navbar-toggle {
+    /*
+    border-color: #000000;
+    */
+    border-color: transparent;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    /*
+    background-color: #000000;
+    */
+    background-color: transparent;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #ffffff;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+    border-color: #ffffff;
+}
+.navbar-default .navbar-link {
+    color: #ffffff;
+}
+.navbar-default .navbar-link:hover {
+    color: #ffffff;
+}
+
+@media (max-width: 767px) {
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color: #ffffff;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #ffffff;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+    .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+    .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+        color: #ffffff;
+        /*
+        background-color: #000000;
+        */
+        background-color: transparent;
+    }
+}
+/* ********** navbar end ********* */
+
+/* ********** header ************ */
+header{
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.header-mask{
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 100%;
+}
+.header-title{
+    text-align: center;
+    margin-top: 15%;
+}
+.header-title h1{
+    font-family: 'Keyline', cursive;
+    font-size: 80px;
+    color: #ffffff;
+}
+.header-tag-line{
+    text-align: center;
+    margin-bottom: 15%;
+}
+.header-tag-line h2{
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 32px;
+}
+/* *********** header end ************ */
+
+/* ********** homepage start ********* */
+
+.home-slider-wrap{
+    position: relative;
+}
+.home-carousel{
+    height: 100%;
+}
+.home-slider-wrap .home-slide-title-wrap{
+    margin-top: 40%;
+    margin-left: 60px;
+}
+.home-slider-wrap .home-slide-title-wrap h2{
+    font-family: 'Ovo', serif;
+    font-size: 58px;
+    color: #ffffff;
+    line-height: 1;
+}
+.home-slider-wrap .home-slide-title-wrap h3{
+    font-size: 28px;
+    color: #ffffff;
+}
+.home-slider-wrap .home-slide-credit-wrap{
+    margin-top: 45px;
+    margin-left: 60px;
+}
+.home-slider-wrap .home-slide-credit-wrap p{
+    font-family: 'Ovo', serif;
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+.home-slider-wrap .home-slide-credit-wrap h4{
+    font-size: 40px;
+    color: #ffffff;
+    line-height: 1;
+}
+.home-slider-wrap .home-slide-credit-wrap a{
+    font-size: 14px;
+    color: #6cb043;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    display: inline-block;
+    margin-top: 30px;
+}
+.home-slider-image{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+}
+
+.owl-nav {
+    position: absolute;
+    top: 35%;
+    left: 0;
+    right: 0;
+}
+.owl-prev {
+    left: 5px;
+    position: absolute;
+    float: left;
+}
+.owl-prev i{
+    color: #fff;
+    font-size: 60px;
+}
+.owl-next {
+    right: 5px;
+    position: absolute;
+    float: right;
+}
+.owl-next i{
+    color: #fff;
+    font-size: 60px;
+}
+
+/* **************** welcome section start ********** */
+
+.welcome-section-background{
+    background-image: url("../images/welcome-background.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+}
+.welcome-section-item{
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 15px;
+}
+.welcome-section-item:nth-child(1){
+    padding-top: 70px;
+}
+.welcome-section-item:last-child{
+    margin-bottom: 30px;
+}
+.welcome-section-content{
+    text-align: center;
+    width: 50%;
+    overflow: hidden;
+    float: left;
+    margin-top: 8%;
+}
+.welcome-section-content h4{
+    font-family: 'Keyline', cursive;
+    color: #492403;
+    font-size: 60px;
+    line-height: 1;
+}
+
+.welcome-section-content h3{
+    color: #492403;
+    text-transform: uppercase;
+    font-size: 30px;
+    letter-spacing: 1.6px;
+}
+.welcome-section-content hr{
+    border-top: 1px solid rgba(73, 36, 3, 0.4);
+    width: 120px;
+}
+.welcome-section-content p{
+    max-width: 400px;
+    margin: auto;
+    font-family: 'Ovo', serif;
+    color: #492403;
+    font-size: 21px;
+}
+.welcome-section-content a{
+    color: #000000;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 30px;
+    display: block;
+    letter-spacing: 1.3px;
+}
+.welcome-section-content a i{
+    color: #492403;
+    font-size: 15px;
+    font-weight: 600;
+}
+.welcome-section-image{
+    float: left;
+    display: inline;
+    overflow: hidden;
+    width: 50%;
+}
+.welcome-section-image picture img{
+    max-width: 520px;
+    border: 20px #ffffff solid;
+    margin-bottom: 40px;
+    margin-left: 15px;
+    box-shadow: 0px 10px 20px 9px rgba(175, 175, 175, 0.46);
+}
+
+/* ******** taste section start ********** */
+.taste-section-background{
+    background-image: url("../images/taste-background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.taste-section-content{
+    text-align: center;
+    margin-top: 30%;
+    margin-bottom: 30%;
+}
+.taste-section-content h2{
+    font-family: 'Keyline', cursive;
+    font-size: 80px;
+    color: #ffffff;
+    /*word-spacing: 20px;*/
+}
+.taste-section-content p{
+    font-family: 'Ovo', serif;
+    font-size: 24px;
+    color: #ffffff;
+}
+.taste-section-content a{
+    font-size: 17px;
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 40px;
+    display: block;
+}
+
+/* ************ delight section *********** */
+.delight-section-background{
+    background-image: url("../images/welcome-background2.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+}
+.delight-section-content{
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+.delight-section-content h4{
+    font-family: 'Keyline', cursive;
+    color: #661d47;
+    font-size: 60px;
+    line-height: 1;
+}
+.delight-section-content h3{
+    color: #661d47;
+    text-transform: uppercase;
+    font-size: 32px;
+    letter-spacing: 1.6px;
+}
+.delight-section-content p{
+    font-size: 18px;
+    max-width: 900px;
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.delight-section-footer{
+    text-align: center;
+    margin-bottom: 60px;
+}
+.delight-section-footer hr{
+    border-top: 1px solid rgba(102, 29, 71, 0.4);
+    width: 150px;
+}
+.delight-section-footer a{
+    color: #000000;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 30px;
+    display: block;
+    letter-spacing: 1.3px;
+}
+.delight-section-footer a i{
+    color: #661d47;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* *********** lifestyle section start *********** */
+.lifestyle-section-background{
+    background-image: url("../images/footer-background.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+.lifestyle-section-background-inner{
+    background-color: rgba(62, 0, 36, 0.82);
+}
+.lifestyle-section-content{
+    text-align: center;
+    margin-top: 60px;
+}
+.lifestyle-section-content h2{
+    font-family: 'Keyline', cursive;
+    font-size: 60px;
+    color: #ffffff;
+    /*word-spacing: 20px;*/
+    line-height: 2;
+}
+.lifestyle-section-content a{
+    color: #ffffff;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 20px;
+    display: block;
+    letter-spacing: 1.3px;
+}
+.lifestyle-category-wrap{
+    background-color: #ffffff;
+    padding-bottom: 30px;
+}
+.lifestyle-category-content{
+    padding: 20px;
+}
+.lifestyle-category-wrap label{
+    color: #661d47;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 3;
+}
+
+.lifestyle-category-wrap h2{
+    font-family: 'Ovo', serif;
+    font-size: 30px;
+    line-height: 1;
+    color: #4d4d4d;
+}
+.lifestyle-section-footer{
+    margin-top: 260px;
+    text-align: center;
+}
+.lifestyle-section-footer .footer-logo img{
+    max-width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.lifestyle-section-footer .footer-navbar{
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.lifestyle-section-footer .footer-navbar ul {
+    list-style-type: none;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.lifestyle-section-footer .footer-navbar li {
+    float: left;
+}
+
+.lifestyle-section-footer .footer-navbar li a {
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 17px;
+}
+.footer-social-icons{
+    text-align: center;
+}
+.footer-social-icons ul {
+    list-style-type: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 0;
+    overflow: hidden;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+.footer-social-icons li {
+    float: left;
+    color: #ffffff;
+    padding: 14px 16px;
+}
+
+.footer-social-icons li a {
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 17px;
+}
+
+/* ************ farm page template start *************** */
+
+.farm-story-background{
+    background-image: url("../images/farm-story-background.jpg");
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+}
+.farm-story-mask{
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+.farm-story-item{
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 15px;
+}
+.farm-story-item:nth-child(1){
+    padding-top: 70px;
+}
+.farm-story-item:last-child{
+    margin-bottom: 30px;
+}
+.farm-story-content{
+    text-align: center;
+    width: 50%;
+    overflow: hidden;
+    float: left;
+    margin-top: 8%;
+}
+.farm-story-content h4{
+    font-family: 'Keyline', cursive;
+    color: #492403;
+    font-size: 60px;
+    line-height: 1;
+}
+
+.farm-story-content h3{
+    color: #492403;
+    text-transform: uppercase;
+    font-size: 30px;
+    letter-spacing: 1.6px;
+}
+.farm-story-content hr{
+    border-top: 1px solid rgba(73, 36, 3, 0.4);
+    width: 120px;
+}
+.farm-story-content p{
+    max-width: 400px;
+    margin: auto;
+    font-family: 'Ovo', serif;
+    color: #492403;
+    font-size: 21px;
+}
+.farm-story-content a{
+    color: #000000;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 30px;
+    display: block;
+    letter-spacing: 1.3px;
+}
+.farm-story-content a i{
+    color: #492403;
+    font-size: 15px;
+    font-weight: 600;
+}
+.farm-story-image{
+    float: left;
+    display: list-item;
+    overflow: hidden;
+    width: 50%;
+}
+.farm-story-image picture img{
+    max-width: 520px;
+    border: 20px #ffffff solid;
+    margin-bottom: 40px;
+    margin-left: 15px;
+    box-shadow: 0px 10px 20px 9px rgba(175, 175, 175, 0.46);
+}
+.farm-middle-background{
+    background-image: url("../images/farm-large-background.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.farm-middle-content{
+    text-align: center;
+    margin-top: 30%;
+    margin-bottom: 30%;
+}
+.farm-middle-content h2{
+    font-family: 'Keyline', cursive;
+    font-size: 80px;
+    color: #ffffff;
+    /*word-spacing: 20px;*/
+}
+.farm-middle-content p{
+    font-family: 'Ovo', serif;
+    font-size: 24px;
+    color: #ffffff;
+}
+.farm-middle-content a{
+    font-size: 17px;
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 40px;
+    display: block;
+}
+
+/* ************** recipes template start ************ */
+
+.recipes-background{
+    background-image: url("../images/default-background.jpg");
+    box-shadow: 0 5px 10px 5px rgba(115, 115, 115, 0.3);
+    z-index: 10;
+}
+.recipes-background-mask{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.recipes-title{
+    display: block;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.recipes-title h2{
+    font-family: 'Keyline', cursive;
+    color: #492403;
+    font-size: 60px;
+}
+.recipes-featured-wrap{
+    margin-bottom: 60px;
+}
+.recipes-featured-item{
+    border: 30px #ffffff solid;
+    margin-bottom: 40px;
+    /*margin-left: 15px;*/
+    box-shadow: 0px 10px 20px 9px rgba(175, 175, 175, 0.46);
+    background-color: #ffffff;
+}
+.recipes-featured-item span{
+    color: #661d47;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 15px 0 5px 0;
+    display: block;
+}
+.recipes-featured-item h3{
+    font-family: 'Ovo', serif;
+    font-size: 34px;
+    line-height: 1;
+    color: #4d4d4d;
+}
+.recipes-featured-item h4{
+    font-size: 26px;
+    margin-top: 5px;
+    color: #4d4d4d;
+}
+.recipes-featured-item p{
+    font-family: 'Ovo', serif;
+    color: #4d4d4d;
+    margin-top: 5px;
+    font-size: 20px;
+}
+
+.recipes-featured-item .media .media-left img{
+    max-width: 200px;
+}
+
+.recipes-search{
+    margin: 30px 0 100px 0;
+}
+
+.recipes-search #search{
+    height: 60px;
+    width: 100%;
+    padding: 30px;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 600;
+    box-shadow: 0px 10px 20px 9px rgba(175, 175, 175, 0.46);
+    background-color: #ffffff;
+    border: 0;
+}
+.recipes-bottom-background-upper{
+    background-image: url("../images/recipe-bottom-background1.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+.recipes-bottom-background-down{
+    background-image: url("../images/welcome-background2.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+}
+.recipes-bottom-background-mask{
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 100%;
+}
+.recipes-bottom-category-wrap{
+    border: 30px #ffffff solid;
+    box-shadow: 0px 10px 20px 9px rgba(175, 175, 175, 0.46);
+    background-color: #ffffff;
+}
+.recipes-bottom-category-content a{
+    color: #000000;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+    display: block;
+    letter-spacing: 1.3px;
+    margin: 70px 0 40px 0;
+    width: 100%;
+    text-align: center;
+}
+.recipes-bottom-category-wrap span{
+    color: #661d47;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 3;
+    margin-top: 20px;
+    display: block;
+}
+.recipes-bottom-category-wrap h2{
+    font-family: 'Ovo', serif;
+    font-size: 30px;
+    line-height: 1;
+    color: #4d4d4d;
+}

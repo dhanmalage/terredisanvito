@@ -1,0 +1,43 @@
+/*
+Theme Name: Terre Di San Vito
+Theme URI:
+Author: Dhananjaya Maha Malage
+Author URI: http://whenalive.com/
+Description: Wordpress Theme developed for Terre Di San Vito.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, brown, orange, tan, white, yellow, light, one-column, two-columns, right-sidebar, flexible-width, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, translation-ready
+Text Domain: terredisanvito
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/* ********** category product css ************ */
+.category-product-wrap{
+    padding: 20px;
+    box-shadow: 0px 10px 20px 9px rgba(175, 175, 175, 0.46);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+}
+.category-product-wrap label{
+    color: #661d47;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.category-product-wrap h2{
+    font-family: 'Ovo', serif;
+    font-size: 30px;
+    line-height: 1;
+    color: #4d4d4d;
+}
+.category-product-wrap h4{
+    font-size: 26px;
+    margin-top: 5px;
+    color: #4d4d4d;
+}
+.category-product-wrap p{
+    color: #4d4d4d;
+}
