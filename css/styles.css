@@ -128,7 +128,7 @@ a:active {
 /* ******************* general css ends *********** */
 
 /**
- * Nav bar
+ * Nav bar default
  */
 .navbar-right{
     margin-top: 40px;
@@ -256,7 +256,7 @@ a:active {
 /* ********** navbar end ********* */
 
 /* ********** header ************ */
-header{
+.sanvito-header{
     background-size: cover;
     background-repeat: no-repeat;
 }

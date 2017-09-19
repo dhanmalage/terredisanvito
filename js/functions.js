@@ -9,7 +9,7 @@ jQuery(document).ready(function() {
  if(intViewportHeight > 600){
   // set home slider height
   //jQuery('#home-slider').css('height',intViewportHeight - 120);
-  jQuery('header').css('height',intViewportHeight);
+  jQuery('.sanvito-header').css('height',intViewportHeight);
   jQuery('.home-slider-image').css('height',intViewportHeight - 120);
  }else{
   jQuery('#home-slider').css('height','500px');
