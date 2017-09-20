@@ -16,8 +16,8 @@ jQuery(document).ready(function() {
  }
 
  // home slider
- var owl = jQuery('.home-carousel');
- owl.owlCarousel({
+ var owlHome = jQuery('.home-carousel');
+ owlHome.owlCarousel({
   items:1,
   loop:true,
   margin:0,
@@ -27,10 +27,28 @@ jQuery(document).ready(function() {
   navText:["<i class='fa fa-angle-left' aria-hidden='true'></i>","<i class='fa fa-angle-right' aria-hidden='true'></i>"],
  });
  jQuery('.play').on('click',function(){
-  owl.trigger('play.owl.autoplay',[1000])
+  owlHome.trigger('play.owlHome.autoplay',[1000])
  })
  jQuery('.stop').on('click',function(){
-  owl.trigger('stop.owl.autoplay')
+  owlHome.trigger('stop.owlHome.autoplay')
+ })
+
+ // Archive Review slider
+ var archiveReview = jQuery('.archive-review-carousel');
+ archiveReview.owlCarousel({
+  items:1,
+  loop:true,
+  margin:0,
+  autoplay:true,
+  smartSpeed: 1500,
+  nav: true,
+  navText:["<i class='fa fa-angle-left' aria-hidden='true'></i>","<i class='fa fa-angle-right' aria-hidden='true'></i>"],
+ });
+ jQuery('.play').on('click',function(){
+  archiveReview.trigger('play.archiveReview.autoplay',[1000])
+ })
+ jQuery('.stop').on('click',function(){
+  archiveReview.trigger('stop.archiveReview.autoplay')
  })
 
  // match height

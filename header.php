@@ -42,11 +42,11 @@ Use it to make something cool, have fun, and share what you've learned with othe
 <body <?php body_class(); ?>>
 
 <header>
-	<?php if(is_woocommerce()): ?>
+	<?php if(is_woocommerce() || is_page_template( 'template-parts/page_sanvito-shop.php' )): ?>
 	<div class="container">
 		<div class="row-fluid">
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-				<nav class="navbar navbar-default" role="navigation">
+				<nav class="navbar navbar-shop" role="navigation">
 					<!-- Brand and toggle get grouped for better mobile display -->
 					<div class="navbar-header">
 						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -55,7 +55,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a class="navbar-brand" href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png"></a>
+						<a class="navbar-brand" href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logo-colored.png"></a>
 					</div>
 					<?php
 					wp_nav_menu( array(

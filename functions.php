@@ -56,3 +56,19 @@ add_action('wp_enqueue_scripts', 'sanvito_scripts');
 // Register Custom Navigation Walker
 require_once('inc/wp-bootstrap-navwalker.php');
 
+// Add WooCommerce custom functions
+require_once('inc/woocommerce-functions.php');
+
+// limit number of characters to displayed
+function char_limit($x, $length)
+{
+	if(strlen($x)<=$length)
+	{
+		echo $x;
+	}
+	else
+	{
+		$y=substr($x,0,$length) . '...';
+		echo $y;
+	}
+}
