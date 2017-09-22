@@ -97,28 +97,17 @@ a:link, a:visited {
     text-decoration: none;
 }
 
-a:active {
-    outline: none;
-}
-
+a:active {outline: none;}
 .clear {clear: both;}
-
-.background-white {
-    background-color: #fff;
-}
-.background-black{
-    background-color: #000000;
-}
-.background-transparent{
-    background-color: transparent;
-}
-.background-rose{
-    background-color: #661d47;
-}
+.background-white {background-color: #fff;}
+.background-black{background-color: #000000;}
+.background-transparent{background-color: transparent;}
+.background-rose{background-color: #661d47;}
 .full-height{height: 100%;}
 .no-padding-left{padding-left: 0;}
 .no-padding-right{padding-right: 0;}
-
+.spacer-40{height: 40px;}
+.spacer-60{height: 60px;}
 .main-divider hr{
     border: none;
     border-top: 1px dotted #f00;

@@ -25,7 +25,7 @@ get_header( 'shop' ); ?>
 <?php
 $queried_object = get_queried_object();
 $taxonomy = $queried_object->taxonomy;
-$term_id = $queried_object->term_id;
+$this_term_id = $queried_object->term_id;
 ?>
 
 <section>
@@ -73,8 +73,8 @@ $term_id = $queried_object->term_id;
                     <div class="row-fluid products">
                         <?php
                             if ( have_posts() ) {
+                                $post_array = array();
                                 while ( have_posts() ) : the_post(); global $post; $product; $woocommerce;
-                                    $post_array = array();
                                     $post_array[] = $post->ID;
                                     ?>
                                         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
@@ -96,12 +96,18 @@ $term_id = $queried_object->term_id;
                                 echo __( 'No products found' );
                             }
                             wp_reset_postdata();
+                            wp_reset_query();
                         ?>
                     </div><!--/.products-->
+                    <div class="clear"></div>
+                    <div class="spacer-60"></div>
                     <div class="row-fluid">
                         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                             <div class="sanvito-archive-content-middle">
                                 <p><?php echo get_field('second_content', $queried_object); ?></p>
+                            </div>
+                            <div class="sanvito-archive-video">
+                                <?php echo get_field('video_embedded_code', $queried_object); ?>
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
@@ -115,10 +121,11 @@ $term_id = $queried_object->term_id;
                                                 'status' => "approve",
                                             );
                                             $comments = get_comments($args);
-                                        print_r($post_array);
                                         foreach($comments as $comment):
                                         ?>
-                                            <div class="item"><?php echo $comment->comment_content; ?></div>
+                                            <div class="item">
+                                                <p><?php echo $comment->comment_content; ?> <span>- <?php echo $comment->comment_author; ?> -</span></p>
+                                            </div>
                                         <?php
                                         endforeach;
                                         ?>
@@ -135,5 +142,108 @@ $term_id = $queried_object->term_id;
 </section>
 
 <div class="clear"></div>
+
+<section>
+    <div class="container">
+        <div class="row-fluid">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding-left no-padding-right">
+                <div class="faq-section-title">
+                    <h3>FAQS</h3>
+                </div>
+                <div class="faq-list-wrap">
+                    <ul>
+                    <?php
+                        $args = array(
+                            'post_type'=> 'faq',
+                            'areas'    => 'painting',
+                            'order'    => 'ASC'
+                        );
+                        $the_query = new WP_Query( $args );
+                        if( $the_query->have_posts() ) :
+                            while ( $the_query->have_posts() ) :
+                                $the_query->the_post(); global $post;
+                                if (in_array($this_term_id, get_field('relevant_product_category'))):
+                    ?>
+                                    <li>
+                                        <h2><?php echo get_the_title(); ?></h2>
+                                        <p><?php echo get_the_content(); ?></p>
+                                    </li>
+                    <?php
+                                endif;
+                            endwhile;
+                        endif;
+                        wp_reset_postdata();
+                        wp_reset_query();
+                    ?>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="row-fluid">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 background-white no-padding-left no-padding-right delight-section-background">
+            <div class="delight-section-background-mask">
+                <div class="container category-page-product-container">
+                    <div class="row-fluid">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <div class="recipes-title">
+                                <h2>We Recommend</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row-fluid products">
+                        <?php
+                        $recommend_args = array(
+                            'post_type'=> 'product',
+                            'post__in' => get_field('we_recommend_products', $queried_object)
+                        );
+                        $recommend_query = new WP_Query( $recommend_args );
+                        if ( $recommend_query->have_posts() ) {
+                            while ( $recommend_query->have_posts() ) : $recommend_query->the_post(); global $post;;
+                                $terms = get_the_terms($post->ID, 'product_cat');
+                                $term = get_term_by( 'id', $terms[0]->term_id, 'product_cat');
+                                ?>
+                                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                    <a href="<?php the_permalink(); ?>" class="category-product-link">
+                                        <div class="category-product-wrap category-product-match-height">
+                                            <?php $src =  wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' ); ?>
+                                            <img class="img-responsive" src="<?php echo $src[0]; ?>">
+                                            <label><?php echo $term->name; ?></label>
+                                            <h2><?php echo get_the_title(); ?></h2>
+                                            <p><?php char_limit(get_the_content(), 60); ?></p>
+                                            <?php $recommend_product = wc_get_product( $post->ID ); ?>
+                                            <h4><?php echo $recommend_product->get_price_html(); ?></h4>
+                                        </div>
+                                    </a>
+                                </div>
+                                <?php
+                            endwhile;
+                        } else {
+                            echo __( 'No products found' );
+                        }
+                        wp_reset_postdata();
+                        wp_reset_query();
+                        ?>
+                    </div><!--/.products-->
+                    <div class="row-fluid">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <div class="delight-section-footer">
+                                <hr>
+                                <a href="<?php echo get_permalink( woocommerce_get_page_id( 'shop' ) ); ?>">Read More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="spacer-60"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
 
 <?php get_footer( 'shop' ); ?>

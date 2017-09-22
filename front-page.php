@@ -112,7 +112,7 @@
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                             <div class="delight-section-footer">
                                 <hr>
-                                <a href="javascript:void(0);">visit the shop <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                                <a href="<?php echo get_permalink( woocommerce_get_page_id( 'shop' ) ); ?>">visit the shop <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
                             </div>
                         </div>
                     </div>

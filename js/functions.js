@@ -56,4 +56,10 @@ jQuery(document).ready(function() {
  jQuery('.category-product-match-height').matchHeight();
  jQuery('.recipes-featured-wrap').matchHeight();
  jQuery('.recipes-bottom-category-match-height').matchHeight();
+
+ // faq js
+ jQuery('.faq-list-wrap ul li p').hide();
+ jQuery('.faq-list-wrap ul li').click(function(){
+  jQuery(this).find('p').slideToggle('fast');
+ });
 });

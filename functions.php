@@ -59,6 +59,9 @@ require_once('inc/wp-bootstrap-navwalker.php');
 // Add WooCommerce custom functions
 require_once('inc/woocommerce-functions.php');
 
+// Register custom post types
+require_once('inc/sanvito-post-types.php');
+
 // limit number of characters to displayed
 function char_limit($x, $length)
 {
@@ -72,3 +75,4 @@ function char_limit($x, $length)
 		echo $y;
 	}
 }
+

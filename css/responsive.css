@@ -73,6 +73,16 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 }
 
+@media only screen and (min-width: 1530px){
+    .sanvito-archive-title {
+        margin-top: 30%;
+    }
+    .sanvito-archive-content {
+        margin-top: 55%;
+    }
+}
+
+
 @media only screen and (max-width: 1024px){
 
 }
