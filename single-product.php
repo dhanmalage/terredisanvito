@@ -22,6 +22,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header( 'shop' ); ?>
 
+<div class="container">
+    <div class="single-product-divider"></div>
+
 <?php
 /**
  * woocommerce_before_main_content hook.
@@ -34,7 +37,7 @@ do_action( 'woocommerce_before_main_content' );
 
 <?php while ( have_posts() ) : the_post(); ?>
 
-    <?php wc_get_template_part( 'content', 'single-product' ); ?>
+    <?php wc_get_template_part( 'content', 'single-sanvito' ); ?>
 
 <?php endwhile; // end of the loop. ?>
 
@@ -55,6 +58,8 @@ do_action( 'woocommerce_after_main_content' );
  */
 do_action( 'woocommerce_sidebar' );
 ?>
+
+</div> <!-- .container end -->
 
 <?php get_footer( 'shop' );
 

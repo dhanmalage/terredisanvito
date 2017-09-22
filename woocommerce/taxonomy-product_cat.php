@@ -20,4 +20,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 //wc_get_template( 'archive-product.php' );
-wc_get_template( 'sanvito-archive-product.php' );
+wc_get_template( 'archive-product-sanvito.php' );

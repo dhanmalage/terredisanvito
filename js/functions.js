@@ -51,6 +51,17 @@ jQuery(document).ready(function() {
   archiveReview.trigger('stop.archiveReview.autoplay')
  })
 
+ // Single product slider
+ var archiveReview = jQuery('.single-product-carousel');
+ archiveReview.owlCarousel({
+  items:1,
+  loop:true,
+  margin:0,
+  autoplay:true,
+  smartSpeed: 1500,
+  dots: true
+ });
+
  // match height
  jQuery('.lifestyle-category-match-height').matchHeight();
  jQuery('.category-product-match-height').matchHeight();

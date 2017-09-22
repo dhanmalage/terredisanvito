@@ -14,6 +14,10 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 
+/* ********** woocommerce general ************* */
+.woocommerce-breadcrumb{
+    display: none;
+}
 /* ********** category product css ************ */
 .category-product-wrap{
     padding: 20px;
@@ -251,4 +255,110 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .faq-list-wrap ul li p{
     font-size: 16px;
     margin: 20px 0 20px 0;
+}
+
+/* *********** single product ************* */
+.sanvito-single-product-wrap h1.product_title{
+    font-size: 36px;
+    font-weight: 100;
+    color: #777777;
+}
+.sanvito-single-product-wrap .woocommerce-product-rating{
+    margin: 15px 0 15px 0;
+    color: #661d47;
+}
+.sanvito-single-product-wrap .woocommerce-product-rating a{
+    font-size: 13px;
+    color: #888;
+}
+.single-product-divider{
+    margin: 0 0 80px 0;
+    padding: 0;
+    border-top: 1px solid #999999;
+}
+.single-product-carousel-wrap{
+    display: block;
+}
+.single-product-carousel .item{
+    padding: 0 20px 0 0;
+}
+.single-product-carousel .item p{
+    font-family: 'Ovo', serif;
+    font-size: 18px;
+}
+.single-product-carousel .owl-dots {
+    margin: 10px 0 30px 0;
+}
+.single-product-carousel .owl-dots .owl-dot {
+    display: inline-block;
+}
+.single-product-carousel .owl-dots span {
+    background: none repeat scroll 0 0 #1480ca;
+    border-radius: 20px;
+    display: block;
+    height: 20px;
+    margin: 5px 7px;
+    opacity: 0.8;
+    width: 20px;
+}
+.single-product-carousel .owl-dots .active span {
+    background: none repeat scroll 0 0 #112bca;
+}
+.sanvito-single-product-wrap p.price{
+    float: left;
+    color: #777777 !important;
+    font-size: 28px !important;
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+/* Quantity Outline Color */
+.woocommerce .quantity .minus,
+.woocommerce .quantity input.qty,
+.woocommerce .quantity .qty-adjust .woocommerce .quantity .plus,
+.woocommerce div.product form.cart .variations select,
+.woocommerce .quantity .qty-plus,
+.woocommerce .quantity .qty-minus,
+.woocommerce .quantity .qty-adjust {
+    border: 1px solid rgba(13, 183, 255, 0.5);
+}
+
+/* Font Color */
+.woocommerce .quantity input.qty {
+    color: #777777;
+    height: 44px;
+}
+/* Icon Up/Down Color */
+.woocommerce .quantity .qty-adjust a > i {
+    color: #777777;
+}
+.woocommerce div.product form.cart .button {
+    height: 44px;
+    margin-left: 5px;
+}
+.sanvito-single-product-wrap .product_meta{
+    color: #777777;
+    font-size: 14px;
+}
+.sanvito-single-product-wrap hr{
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border: 0;
+    border-top: 1px solid #d0d0d0;
+}
+.single-product-social-icons {
+    text-align: center;
+}
+.single-product-social-icons ul{
+    list-style-type: none;
+}
+.single-product-social-icons ul li{
+    display: inline;
+    color: #666666;
+    margin: 0 10px 0 10px;
+    font-weight: 600;
+    font-size: 18px;
+}
+.single-product-social-icons ul li a{
+    color: #666666;
 }

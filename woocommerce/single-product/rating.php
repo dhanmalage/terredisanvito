@@ -38,3 +38,6 @@ if ( $rating_count > 0 ) : ?>
 	</div>
 
 <?php endif; ?>
+
+
+<?php single_product_content_slider(); ?>
