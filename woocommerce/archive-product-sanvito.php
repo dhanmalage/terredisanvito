@@ -155,7 +155,7 @@ $this_term_id = $queried_object->term_id;
                     <?php
                         $args = array(
                             'post_type'=> 'faq',
-                            'areas'    => 'painting',
+                            //'areas'    => 'painting',
                             'order'    => 'ASC'
                         );
                         $the_query = new WP_Query( $args );

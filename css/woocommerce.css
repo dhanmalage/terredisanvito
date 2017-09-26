@@ -362,3 +362,123 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .single-product-social-icons ul li a{
     color: #666666;
 }
+.woocommerce div.product div.images .flex-control-thumbs{
+    margin-top: 20px;
+}
+/* ********** tab section start ********** */
+.woocommerce div.product .woocommerce-tabs ul.tabs{
+    text-align: center;
+    display:table;
+    width:100%;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    overflow: hidden;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs::before{
+    border-bottom: 0;
+}
+.woocommerce div.product .woocommerce-tabs ul.tabs li {
+    background-color: transparent;
+    border: 0;
+}
+.woocommerce #content div.product .woocommerce-tabs ul.tabs li, .woocommerce div.product .woocommerce-tabs ul.tabs li, .woocommerce-page #content div.product .woocommerce-tabs ul.tabs li, .woocommerce-page div.product .woocommerce-tabs ul.tabs li{
+    display:table-cell;
+}
+.woocommerce div.product .woocommerce-tabs ul.tabs li a {
+    text-transform: uppercase;
+    text-align: center;
+    padding: 5px 40px;
+    border-radius: 20px;
+    border: 1px solid #ffffff;
+}
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active a{
+    border: 1px solid #777777;
+}
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active::before{
+    box-shadow: none;
+}
+.woocommerce div.product .woocommerce-tabs ul.tabs li::after, .woocommerce div.product .woocommerce-tabs ul.tabs li::before{
+    border: 0;
+    box-shadow: none;
+}
+.woocommerce #content div.product .woocommerce-tabs, .woocommerce div.product .woocommerce-tabs, .woocommerce-page #content div.product .woocommerce-tabs, .woocommerce-page div.product .woocommerce-tabs{
+    padding-top: 40px;
+}
+
+.woocommerce-Tabs-panel p{
+    margin: 20px 0 20px 0;
+    font-family: 'Ovo', serif;
+    font-size: 18px;
+}
+
+.woocommerce-Reviews form textarea{
+    border-radius: 3px;
+}
+.woocommerce-Reviews form input{
+    border: 1px solid #999;
+    border-radius: 3px;
+}
+.woocommerce #review_form #respond .form-submit input{
+    background-color: #935386;
+    color: #fff;
+}
+
+/* ******* testimonial slider ********** */
+.testimonials-title{
+    text-align: center;
+    margin: 30px 0 30px 0;
+}
+.testimonials-title h3{
+    font-family: 'Keyline', cursive;
+    color: #585858;
+    font-size: 44px;
+}
+.single-product-footer-background{
+    background-image: url('../images/testimonials-background.jpg');
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: inherit;
+}
+.testimonials-carousel .item p{
+    text-align: center;
+    /*padding: 5rem 2rem;*/
+    padding: 8rem 8rem 3rem 8rem;
+    margin: 0;
+    font-size: 24px;
+}
+.testimonials-carousel .item p span{
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 60px;
+}
+.testimonials-carousel .owl-prev i{
+    color: #661d47;
+}
+.testimonials-carousel .owl-next i{
+    color: #661d47;
+}
+.testimonials-carousel .owl-dots {
+    margin: 10px 0 30px 0;
+    text-align: center;
+}
+.testimonials-carousel .owl-dots .owl-dot {
+    display: inline-block;
+}
+.testimonials-carousel .owl-dots span {
+    background: none repeat scroll 0 0 #661d47;
+    border-radius: 20px;
+    display: block;
+    height: 10px;
+    margin: 5px 5px;
+    width: 10px;
+    opacity: 0.5;
+}
+.testimonials-carousel .owl-dots .active span {
+    background: none repeat scroll 0 0 #661d47;
+    opacity: 1;
+    height: 10px;
+    width: 10px;
+}

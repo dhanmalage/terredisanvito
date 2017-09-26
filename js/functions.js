@@ -9,7 +9,8 @@ jQuery(document).ready(function() {
  if(intViewportHeight > 600){
   // set home slider height
   //jQuery('#home-slider').css('height',intViewportHeight - 120);
-  jQuery('.sanvito-header').css('height',intViewportHeight);
+  jQuery('.header-home').css('height',intViewportHeight);
+  jQuery('.header-page').css('height',intViewportHeight * 0.8);
   jQuery('.home-slider-image').css('height',intViewportHeight - 120);
  }else{
   jQuery('#home-slider').css('height','500px');
@@ -51,7 +52,7 @@ jQuery(document).ready(function() {
   archiveReview.trigger('stop.archiveReview.autoplay')
  })
 
- // Single product slider
+ // Single product content slider
  var archiveReview = jQuery('.single-product-carousel');
  archiveReview.owlCarousel({
   items:1,
@@ -61,6 +62,25 @@ jQuery(document).ready(function() {
   smartSpeed: 1500,
   dots: true
  });
+
+
+ var owlTestimonials = jQuery('.testimonials-carousel');
+ owlTestimonials.owlCarousel({
+  items:1,
+  loop:true,
+  margin:0,
+  autoplay:true,
+  smartSpeed: 1500,
+  nav: true,
+  navText:["<i class='fa fa-angle-left' aria-hidden='true'></i>","<i class='fa fa-angle-right' aria-hidden='true'></i>"],
+  dots: true
+ });
+ jQuery('.play').on('click',function(){
+  owlTestimonials.trigger('play.owlTestimonials.autoplay',[1000])
+ })
+ jQuery('.stop').on('click',function(){
+  owlTestimonials.trigger('stop.owlTestimonials.autoplay')
+ })
 
  // match height
  jQuery('.lifestyle-category-match-height').matchHeight();

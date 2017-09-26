@@ -387,7 +387,7 @@ a:active {outline: none;}
 }
 .header-title{
     text-align: center;
-    margin-top: 15%;
+    margin-top: 5%;
 }
 .header-title h1{
     font-family: 'Keyline', cursive;
@@ -396,7 +396,7 @@ a:active {outline: none;}
 }
 .header-tag-line{
     text-align: center;
-    margin-bottom: 15%;
+    /*margin-bottom: 15%;*/
 }
 .header-tag-line h2{
     color: #ffffff;

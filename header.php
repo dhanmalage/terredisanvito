@@ -75,7 +75,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 		</div>
 	</div>
 	<?php else: ?>
-		<div class="sanvito-header" style="<?php echo ((is_home() || is_front_page()) ? 'background-color: #000000;' : 'background-color: transparent; background-image: url('.get_template_directory_uri().'/images/our-farm-background.jpg);'); ?>">
+		<div class="sanvito-header <?php echo ((is_home() || is_front_page()) ? 'header-home' : 'header-page'); ?>" style="<?php echo ((is_home() || is_front_page()) ? 'background-color: #000000;' : 'background-color: transparent; background-image: url('.get_template_directory_uri().'/images/our-farm-background.jpg);'); ?>">
 			<div class="header-mask">
 				<div class="container">
 					<div class="row-fluid">

@@ -1,3 +1,32 @@
+<?php if(is_product()): ?>
+
+    <div class="clear"></div>
+
+    <section>
+        <div class="row-fluid">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding-left no-padding-right single-product-footer-background">
+                <div class="single-product-footer-background-mask">
+                    <div class="row-fluid">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <div class="testimonials-title">
+                                <h3>Testimonials</h3>
+                            </div>
+                            <div class="testimonials-slider-wrap" id="testimonials-slider">
+                                <div class="testimonials-carousel owl-carousel owl-theme">
+                                        <?php single_product_testimonials_slider(); ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="clear"></div>
+
+<?php endif; ?>
+
 <footer>
     <div class="row-fluid">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding-left no-padding-right lifestyle-section-background">
