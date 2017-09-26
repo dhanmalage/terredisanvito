@@ -996,3 +996,14 @@ a:active {outline: none;}
     line-height: 1;
     color: #4d4d4d;
 }
+
+/* ************ recipes single template start *********** */
+.recipe-single-category-link p{
+    font-size: 14px;
+}
+.recipe-single-category-link p a{
+    font-size: 14px;
+    color: #661d47;
+    text-decoration: none;
+    text-transform: uppercase;
+}
