@@ -278,6 +278,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 .single-product-carousel-wrap{
     display: block;
+    margin-bottom: 15px;
 }
 .single-product-carousel .item{
     padding: 0 20px 0 0;

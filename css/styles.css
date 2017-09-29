@@ -378,7 +378,7 @@ a:active {outline: none;}
 
 /* ********** header ************ */
 .sanvito-header{
-    background-size: cover;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
 }
 .header-mask{
@@ -998,6 +998,9 @@ a:active {outline: none;}
 }
 
 /* ************ recipes single template start *********** */
+.recipe-single-category-link{
+    margin: 30px 0;
+}
 .recipe-single-category-link p{
     font-size: 14px;
 }
@@ -1006,4 +1009,83 @@ a:active {outline: none;}
     color: #661d47;
     text-decoration: none;
     text-transform: uppercase;
+}
+.recipe-single-main-text p{
+    font-family: 'Ovo', serif;
+    font-size: 21px;
+}
+
+.single-recipe-social-icons {
+    text-align: center;
+}
+.single-recipe-social-icons ul{
+    list-style-type: none;
+}
+.single-recipe-social-icons ul li{
+    display: inline;
+    color: #666666;
+    margin: 0 10px 0 10px;
+    font-weight: 600;
+    font-size: 18px;
+}
+.single-recipe-social-icons ul li a{
+    color: #666666;
+}
+.single-recipe-quote-background{
+    background-image: url('../images/single-pecipe-quote-background.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.single-recipe-quote{
+    text-align: center;
+    padding: 23% 0;
+}
+.single-recipe-quote h4{
+    font-family: 'Keyline', cursive;
+    color: #ffffff;
+    font-size: 40px;
+    line-height: 1.3;
+}
+.single-recipe-quote p{
+    color: #ffffff;
+    margin-top: 40px;
+}
+.recipe-content-section-wrap .recipe-content-item{
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 15px;
+}
+.recipe-content-section-wrap .recipe-content-item:nth-child(1){
+    padding-top: 70px;
+}
+.recipe-content-section-wrap .recipe-content-item:last-child{
+    margin-bottom: 30px;
+}
+.recipe-content-section-wrap .recipe-content-item .recipe-content{
+    width: 50%;
+    overflow: hidden;
+    float: left;
+}
+.recipe-content-section-wrap .recipe-content-item .recipe-content p{
+    margin: auto;
+    font-family: 'Ovo', serif;
+    color: #492403;
+    font-size: 21px;
+}
+.recipe-content-section-wrap .recipe-content-item .recipe-image{
+    float: left;
+    display: inline;
+    overflow: hidden;
+    width: 50%;
+}
+.recipe-content-section-wrap .recipe-content-item .recipe-image picture img{
+    border: 20px #ffffff solid;
+    margin-bottom: 40px;
+    margin-left: 15px;
+    box-shadow: 0px 10px 20px 9px rgba(175, 175, 175, 0.46);
+    max-width: 300px;
+}
+/* ********* recipes single sidebar start ******** */
+.recipe-content-section-wrap{
+    border-right: 1px solid #777777;
 }

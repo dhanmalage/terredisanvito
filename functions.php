@@ -76,3 +76,20 @@ function char_limit($x, $length)
 	}
 }
 
+// single recipe page social share
+function single_recipe_social_share(){
+	// check if the repeater field has rows of data
+	echo '<div class="single-recipe-social-icons">';
+		echo '<ul>';
+			echo '<li>';
+				echo '<a href="#" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>';
+			echo '</li>';
+			echo '<li>';
+				echo '<a href="#" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>';
+			echo '</li>';
+			echo '<li>';
+				echo '<a href="#" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>';
+			echo '</li>';
+		echo '</ul>';
+	echo '</div>';
+}
