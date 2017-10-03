@@ -244,6 +244,4 @@ $this_term_id = $queried_object->term_id;
     </div>
 </section>
 
-
-
 <?php get_footer( 'shop' ); ?>

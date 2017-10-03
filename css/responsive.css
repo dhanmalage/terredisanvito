@@ -31,8 +31,201 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1024px){
+@media only screen and (max-width: 768px) {
+    .home-slider-wrap .home-slide-title-wrap {
+        margin-top: 5%;
+        margin-left: 0;
+    }
+    .home-slider-wrap .home-slide-credit-wrap {
+        margin-top: 24px;
+        margin-left: 0;
+    }
+    .home-slider-wrap .home-slide-credit-wrap a {
+        margin-top: 20px;
+    }
+    .home-slider-wrap .home-slide-title-wrap h2 {
+        font-size: 26px;
+    }
+    .home-slider-wrap .home-slide-title-wrap h3 {
+        font-size: 14px;
+    }
+    .home-slider-wrap .home-slide-credit-wrap h4 {
+        font-size: 24px;
+    }
+    .home-slider-wrap .home-slide-credit-wrap p {
+        font-size: 16px;
+    }
+    .welcome-section-content h4, .delight-section-content h4, .farm-story-content h4, .recipes-title h2 {
+        font-size: 48px;
+    }
+    .welcome-section-content h3, .delight-section-content h3, .farm-story-content h3 {
+        font-size: 22px;
+    }
+    .welcome-section-content p, .delight-section-content p, .farm-story-content p, .sanvito-archive-content p, .sanvito-archive-content-middle p {
+        font-size: 18px;
+    }
+    .home-slider-image{
+        margin-top: 20px;
+    }
+    .welcome-section-content, .farm-story-content {
+        width: 100%;
+    }
+    .welcome-section-image, .farm-story-image{
+        width: 100%;
+    }
+    .welcome-section-image picture img, .farm-story-image picture img {
+        max-width: 100%;
+        border: 0;
+        margin-bottom: 0;
+        margin-left: 0;
+        margin-top: 15px;
+        box-shadow: none;
+    }
+    .taste-section-content h2 {
+        font-size: 40px;
+    }
+    .taste-section-content p, .farm-middle-content p {
+        font-size: 16px;
+    }
+    .taste-section-content a, .farm-middle-content a {
+        font-size: 14px;
+        margin-top: 24px;
+    }
+    .category-product-wrap h4 {
+        font-size: 22px;
+    }
+    .lifestyle-section-content h2 {
+        font-size: 42px;
+    }
+    .lifestyle-category-wrap h2, .category-product-wrap h2, .recipes-featured-item h3, .recipes-bottom-category-wrap h2 {
+        font-size: 24px;
+    }
+    .lifestyle-category-wrap label, .category-product-wrap label, .category-product-wrap p, .recipes-featured-item span, .recipes-bottom-category-wrap span, .archive-review-slider-wrap .item span {
+        font-size: 14px;
+    }
+    .header-title h1, .sanvito-shop-title h1, .sanvito-archive-title h1{
+        font-size: 46px;
+    }
+    .header-tag-line h2, .sanvito-archive-title h2 {
+        font-size: 18px;
+    }
+    .header-tag-line {
+        margin-bottom: 15%;
+    }
+    .farm-story-item:nth-child(1) {
+        padding-top: 20px;
+    }
+    .recipes-featured-item, .recipes-bottom-category-wrap {
+        border: 15px #ffffff solid;
+    }
+    .recipes-featured-item p{
+        font-size: 16px;
+    }
+    .recipes-featured-item .media-left{
+        display: block;
+        width: 100%;
+        padding-right: 0;
+    }
+    .recipes-featured-item .media .media-left img{
+        max-width: 100%;
+    }
+    .recipes-featured-item .media-body{
+        display: block;
+    }
+    .recipes-bottom-category-wrap{
+        margin-bottom: 40px;
+    }
+    .recipes-bottom-category-content a {
+        font-size: 14px;
+        margin: 40px 0 20px 0;
+    }
+    .sanvito-shop-category-menu ul{
+        display: block;
+    }
+    .sanvito-shop-category-menu li{
+        display: block;
+        padding: 8px 0;
+    }
+    .sanvito-shop-category-menu li a{
+        font-size: 14px;
+    }
+    .sanvito-archive-side-image{
+        display: none;
+    }
+    .sanvito-archive-header-background {
+        background-size: 100% 18%;
+    }
+    .sanvito-archive-title {
+        margin-top: 10%;
+    }
+    .sanvito-archive-content {
+        margin-top: 30%;
+    }
+    .sanvito-archive-quote h4 {
+        font-size: 32px;
+    }
+    .archive-review-slider-wrap .item p{.
+        padding: 5rem 1rem;
+        font-size: 16px;
+    }
+    .faq-list-wrap ul li {
+        padding: 24px 0 24px 0;
+    }
+    .faq-list-wrap ul li h2 {
+        font-size: 16px;
+    }
+    .faq-list-wrap ul li p {
+        font-size: 14px;
+    }
+    .single-product-social-icons {
+        margin-bottom: 30px;
+    }
+    .woocommerce div.product .woocommerce-tabs ul.tabs, .woocommerce div.product .woocommerce-tabs ul.tabs li{
+        display: block !important;
+        padding-left: 0;
+    }
+    .woocommerce div.product .woocommerce-tabs ul.tabs li{
+        margin: 10px 0;
+    }
+    .woocommerce-Tabs-panel p {
+        font-size: 16px;
+    }
+    .sanvito-single-product-wrap h1.product_title {
+        font-size: 28px;
+    }
+    .sanvito-single-product-wrap p.price {
+        font-size: 24px !important;
+    }
+    .testimonials-carousel .item p {
+        padding: 0 15px 0 15px;
+        margin: 0;
+        font-size: 14px;
+    }
+    .testimonials-carousel .item p span{
+        margin-top: 15px;
+        font-size: 16px;
+    }
+}
 
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+    .home-slider-wrap .home-slide-title-wrap {
+        margin-top: 14%;
+    }
+    .home-slider-wrap .home-slide-title-wrap h2 {
+        font-size: 26px;
+    }
+    .home-slider-wrap .home-slide-title-wrap h3 {
+        font-size: 14px;
+    }
+    .home-slider-wrap .home-slide-credit-wrap h4 {
+        font-size: 24px;
+    }
+    .home-slider-wrap .home-slide-credit-wrap p {
+        font-size: 16px;
+    }
+    .home-slider-wrap .home-slide-credit-wrap a {
+        font-size: 13px;
+    }
 }
 
 @media (max-width: 978px) {
@@ -40,7 +233,24 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 @media only screen and (min-width: 1025px) and (max-width: 1200px){
-
+    .home-slider-wrap .home-slide-title-wrap {
+        margin-top: 20%;
+    }
+    .home-slider-wrap .home-slide-title-wrap h2 {
+        font-size: 40px;
+    }
+    .home-slider-wrap .home-slide-title-wrap h3 {
+        font-size: 20px;
+    }
+    .home-slider-wrap .home-slide-credit-wrap h4 {
+        font-size: 32px;
+    }
+    .home-slider-wrap .home-slide-credit-wrap p {
+        font-size: 16px;
+    }
+    .home-slider-wrap .home-slide-credit-wrap a {
+        font-size: 13px;
+    }
 }
 
 @media only screen and (min-width: 1025px) and (max-width: 1439px){
@@ -87,8 +297,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 }
 
-@media only screen and (max-width: 768px) {
 
-}
 
 

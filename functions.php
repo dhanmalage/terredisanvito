@@ -62,6 +62,33 @@ require_once('inc/woocommerce-functions.php');
 // Register custom post types
 require_once('inc/sanvito-post-types.php');
 
+// Header Navigation
+function header_navigation(){
+	global $woocommerce;
+	echo '<nav class="navbar' . (is_woocommerce() || is_page_template( 'template-parts/page_sanvito-shop.php' ) || is_tax() || is_home() || is_cart() || is_checkout() ? ' navbar-shop' : ' navbar-default') . '" role="navigation">';
+		echo '<div class="navbar-header">';
+			echo '<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">';
+				echo '<span class="sr-only">Toggle navigation</span>';
+				echo '<span class="icon-bar"></span>';
+				echo '<span class="icon-bar"></span>';
+				echo '<span class="icon-bar"></span>';
+			echo '</button>';
+			echo '<a class="navbar-brand" href="' . home_url() . '"><img src="' . get_template_directory_uri() . '/images/'.(is_woocommerce() || is_page_template('template-parts/page_sanvito-shop.php') || is_tax() || is_home() || is_cart() || is_checkout() ? 'logo-colored.png' : 'logo.png').'"></a>';
+		echo '</div>';
+		wp_nav_menu( array(
+				'menu'              => 'primary',
+				'theme_location'    => 'primary',
+				'depth'             => 2,
+				'container'         => 'div',
+				'container_class'   => 'collapse navbar-collapse',
+				'container_id'      => 'bs-example-navbar-collapse-1',
+				'menu_class'        => 'nav navbar-nav navbar-right',
+				'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+				'walker'            => new WP_Bootstrap_Navwalker())
+		);
+	echo '</nav>';
+}
+
 // limit number of characters to displayed
 function char_limit($x, $length)
 {
@@ -93,3 +120,4 @@ function single_recipe_social_share(){
 		echo '</ul>';
 	echo '</div>';
 }
+

@@ -385,6 +385,10 @@ a:active {outline: none;}
     background-color: rgba(0, 0, 0, 0.2);
     height: 100%;
 }
+.recipes-single-header-mask{
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+}
 .header-title{
     text-align: center;
     margin-top: 5%;
@@ -402,6 +406,16 @@ a:active {outline: none;}
     color: #ffffff;
     text-transform: uppercase;
     font-size: 32px;
+}
+.recipes-single-header .header-title{
+    margin-top: 0;
+}
+.single-header-image{
+    margin: 40px 0;
+}
+.single-header-image img{
+    max-width: 80%;
+    margin: auto;
 }
 /* *********** header end ************ */
 
@@ -1086,6 +1100,222 @@ a:active {outline: none;}
     max-width: 300px;
 }
 /* ********* recipes single sidebar start ******** */
-.recipe-content-section-wrap{
-    border-right: 1px solid #777777;
+.recipe-single-sidebar hr{
+    border-top: 1px solid rgba(73, 36, 3, 0.4);
+    width: 100%;
+    margin: 10px 0;
+    display: inline-block;
 }
+.recipe-content-section-wrap{
+    border-right: 1px solid rgba(73, 36, 3, 0.4);
+}
+.recipe-social-follow{
+    display: inline-block;
+}
+.recipe-category-links{
+    margin-top: 60px;
+}
+.recipe-category-links ul li{
+    margin: 3px 0;
+}
+.recipe-category-links h3{
+    margin: auto;
+    font-family: 'Ovo', serif;
+    color: #492403;
+    font-size: 21px;
+    font-weight: 600;
+    margin: 0;
+}
+.recipe-category-links ul li a{
+    color: #492403;
+    font-size: 16px;
+    margin: 7px 0;
+}
+/* ******* social ********* */
+.recipe-social-follow ul{
+    list-style-type: none;
+    display: inline;
+}
+.recipe-social-follow ul li{
+    float: left;
+}
+.recipe-social-follow ul li a.fa{
+    padding: 15px;
+    font-size: 30px;
+    width: 60px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+}
+.recipe-social-follow ul li a.fa:hover {
+    opacity: 0.7;
+}
+.recipe-social-follow ul li a.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.recipe-social-follow ul li a.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.recipe-social-follow ul li a.fa-google {
+    background: #dd4b39;
+    color: white;
+}
+.recipe-social-follow ul li a.fa-youtube {
+    background: #bb0000;
+    color: white;
+}
+
+.recipe-social-follow ul li a.fa-instagram {
+    background: #125688;
+    color: white;
+}
+.recipes-taxonomy-wrap{
+    margin: 40px 0 60px 0;
+}
+.recipes-taxonomy-wrap a.recipe-taxonomy-item{
+    display: block;
+    margin-bottom: 40px;
+}
+.recipes-archive-pegination{
+    text-align: center;
+    margin-top: 40px;
+}
+.recipes-archive-pegination a{
+    color: #000000;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1.3px;
+    padding: 0 30px;
+}
+.recipes-archive-pegination a i{
+    color: #661d47;
+}
+.recipes-archive-pegination .nav-previous, .recipes-archive-pegination .nav-next{
+    display: inline;
+}
+/* ******** social end ********* */
+
+/* ******** contact us *********** */
+.contact-us-header{
+
+}
+.contact-us-header .header-title h1 {
+    margin-bottom: 40px;
+    font-size: 60px;
+}
+.contact-us-header-mask{
+    background-color: #0d254a;
+    height: 100%;
+}
+.contact-us-background{
+    background-image: url('../images/contact-us-background.jpg');
+    padding-bottom: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+}
+.contact-us-background-mask{
+    background: #0d254a; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(rgb(13,37,74),rgba(255,0,0,0)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(rgb(13,37,74),rgba(255,0,0,0)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(rgb(13,37,74),rgba(255,0,0,0)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(rgb(13,37,74),rgba(255,0,0,0)); /* Standard syntax (must be last) */
+    height: 100%;
+}
+.contact-us-location{
+    color: #ffffff;
+    font-family: 'Ovo', serif;
+    font-size: 24px;
+    line-height: 1.5;
+}
+.contact-us-location em{
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+.contact-us-location p{
+    margin-bottom: 30px;
+}
+.sanvito-contact-field input[type="email"]{
+    border-radius: 0;
+}
+.sanvito-contact-field input[type="text"]{
+    border-radius: 0;
+}
+.sanvito-contact-field textarea{
+    border-radius: 0;
+}
+.contact-textarea{
+    border-radius: 0;
+}
+.btn-contact-right{
+    float: right;
+    padding: 10px 40px;
+    border-radius: 0;
+}
+div.wpcf7-validation-errors{
+    color: #ffffff;
+}
+/* ******** contact us end ********** */
+
+/* ************ single page start ********** */
+.sanvito-single-post{
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+.sanvito-single-post h1{
+    font-family: 'Keyline', cursive;
+    color: #492403;
+    font-size: 60px;
+}
+.sanvito-single-post .single-content p{
+    font-family: 'Ovo', serif;
+    color: #492403;
+    font-size: 21px;
+}
+/* ************ single page end ********** */
+
+/* ********* page.php start ******* */
+.page-wrap{
+    margin-bottom: 60px;
+}
+.page-wrap h1{
+    font-family: 'Keyline', cursive;
+    color: #661d47;
+    font-size: 48px;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 30px;
+}
+/* ********* page.php end ******* */
+
+/* *********** checkout page ********** */
+.woocommerce form .form-row input.input-text,
+.woocommerce form .form-row textarea,
+.woocommerce-page form .form-row input.input-text,
+.woocommerce-page form .form-row text area {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid #dcdcdc;
+    border-radius: 3px;
+    padding: 8px 5px;
+    color: #777;
+    letter-spacing: 0.6px;
+    width: 100%;
+    outline: none;
+}
+.select2-container--default .select2-selection--single{
+    border: 1px solid #dcdcdc;
+    color: #777;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered{
+    color: #777;
+}
+/* *********** checkout page end ********** */
+

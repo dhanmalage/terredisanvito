@@ -15,23 +15,56 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <!-- Mobile Specific Meta -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
 
-    <meta name="resource-type" content="document" />
-    <meta http-equiv="content-type" content="text/html; charset=US-ASCII" />
-    <meta http-equiv="content-language" content="en-us" />
-    <meta name="author" content="Dhananjaya Maha Malage" />
-    <meta name="contact" content="dhananjaya3107@gmail.com" />
-    <meta name="copyright" content="Copyright (c) 2017 Dhananjaya Maha Malage. All Rights Reserved." />
-    <meta name="theme-color" content="#ffffff">
+<?php get_header(); ?>
 
-</head>
-<body>
+    <section>
+        <div class="row-fluid">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 background-white recipes-taxonomy-wrap no-padding-left no-padding-right">
+                <div class="container">
+                    <div class="row-fluid">
+                        <?php
+                        if ( have_posts() ) {
+                            while ( have_posts() ) {
+                                the_post(); global $post;
+                                $this_terms = get_categories();
+                                ?>
+                                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                    <a href="<?php the_permalink(); ?>" class="recipe-taxonomy-item">
+                                        <div class="recipes-bottom-category-wrap recipes-bottom-category-match-height">
+                                            <picture>
+                                                <source srcset="<?php echo get_the_post_thumbnail_url( $post->ID, 'full' ); ?>" media="(-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx)">
+                                                <source srcset="<?php echo get_the_post_thumbnail_url( $post->ID, 'full' ); ?>">
+                                                <img class="photo img-responsive" src="<?php echo get_the_post_thumbnail_url( $post->ID, 'full' ); ?>">
+                                            </picture>
+                                            <div class="recipes-bottom-category-content">
+                                            <span>
+                                                <?php if($this_terms != null): $i=1; foreach($this_terms as $this_term): ?>
+                                                    <?php echo (($i > 1) ? ', ' . $this_term->name : '' . $this_term->name); ?>
+                                                    <?php $i++; endforeach; endif; ?>
+                                            </span>
+                                                <h2><?php echo get_the_title(); ?></h2>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <?php
+                                //
+                            } // end while
+                        } // end if
+                        ?>
+                    </div>
+                    <div class="row-fluid">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <div class="recipes-archive-pegination">
+                                <div class="nav-previous"><?php next_posts_link( '<i class="fa fa-long-arrow-left" aria-hidden="true"></i> Older posts' ); ?></div>
+                                <div class="nav-next"><?php previous_posts_link( 'Newer posts <i class="fa fa-long-arrow-right" aria-hidden="true"></i>' ); ?></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-</body>
-</html>
+<?php get_footer(); ?>

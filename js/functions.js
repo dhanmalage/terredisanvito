@@ -5,16 +5,22 @@
 jQuery(document).ready(function() {
 
  // home slider height
+ var intViewportWidth = window.innerWidth;
  var intViewportHeight = window.innerHeight;
- if(intViewportHeight > 600){
+ if(intViewportHeight > 600 && intViewportWidth > 768){
   // set home slider height
   //jQuery('#home-slider').css('height',intViewportHeight - 120);
   jQuery('.header-home').css('height',intViewportHeight);
   jQuery('.header-page').css('height',intViewportHeight * 0.8);
-  jQuery('.home-slider-image').css('height',intViewportHeight - 120);
+  jQuery('.home-slider-image').css('height',intViewportHeight - 160);
  }else{
   jQuery('#home-slider').css('height','500px');
  }
+
+ if(intViewportWidth < 768){
+  jQuery('.home-slider-image').css('height',intViewportHeight * 0.4);
+ }
+
 
  // home slider
  var owlHome = jQuery('.home-carousel');
